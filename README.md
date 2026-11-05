@@ -68,7 +68,7 @@ Mini App требует HTTPS. `file://` и `http://` в Telegram не откр�
 ## Локальный запуск
 
 ```bash
-python -m http.server 8765 --directory site
+python -m http.server 8765 --directory docs
 ```
 
 Откройте http://127.0.0.1:8765/. Вне Telegram приложение работает как обычный сайт:
@@ -92,10 +92,10 @@ python tools/gen_fixtures.py
 
 ## Деплой
 
-Сайт лежит в `site/` и не требует сборки. Публикация идёт напрямую из ветки `main`,
+Сайт лежит в `docs/` и не требует сборки. Публикация идёт напрямую из ветки `main`,
 без GitHub Actions:
 
-**Settings → Pages → Source: Deploy from a branch → `main` / `/site`.**
+**Settings → Pages → Source: Deploy from a branch → `main` / `/docs`.**
 
 Адрес: `https://<username>.github.io/<repo>/`. Каждый пуш в `main` обновляет сайт
 в течение минуты.
@@ -111,7 +111,7 @@ python tools/gen_fixtures.py
 ## Структура
 
 ```
-site/
+docs/
   index.html
   css/styles.css
   js/
@@ -129,7 +129,7 @@ tools/
 
 ## Обновление сумм
 
-1. Правьте `site/js/data.js` (МРОТ, ПМ, лимиты, маткапитал).
+1. Правьте `docs/js/data.js` (МРОТ, ПМ, лимиты, маткапитал).
 2. Обновите те же значения в Python-проекте бота (`app/data.py`).
 3. Перегенерируйте эталоны: `python tools/gen_fixtures.py`.
 4. Прогоните `node --test tests/*.test.js`.

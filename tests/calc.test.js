@@ -9,8 +9,8 @@ import {
   calculateUnified,
   parseCount,
   parseMoney,
-} from '../site/js/calc.js';
-import { formatMoney, formatPercent } from '../site/js/format.js';
+} from '../docs/js/calc.js';
+import { formatMoney, formatPercent } from '../docs/js/format.js';
 
 const fixtures = JSON.parse(
   readFileSync(new URL('./fixtures.json', import.meta.url), 'utf8'),
