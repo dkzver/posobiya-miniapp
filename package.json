@@ -1,0 +1,11 @@
+{
+  "name": "posobiya-miniapp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Telegram Mini App для расчёта пособий РФ 2026",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "serve": "python -m http.server 8765 --directory site"
+  }
+}

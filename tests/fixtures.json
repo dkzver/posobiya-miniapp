@@ -1,0 +1,465 @@
+[
+  {
+    "id": "bir-min",
+    "kind": "calculateBir",
+    "input": {
+      "earnings2024": 0.0,
+      "earnings2025": 0.0,
+      "days": 140,
+      "excludedDays": 0,
+      "tenure6m": true,
+      "district": 1.0
+    },
+    "expected": {
+      "amount": "124702.20",
+      "daily": "890.73",
+      "minAmount": "124702.20",
+      "maxAmount": "955836.00",
+      "limitedBy": "min"
+    }
+  },
+  {
+    "id": "bir-regular",
+    "kind": "calculateBir",
+    "input": {
+      "earnings2024": 1000000.0,
+      "earnings2025": 1000000.0,
+      "days": 140,
+      "excludedDays": 0,
+      "tenure6m": true,
+      "district": 1.0
+    },
+    "expected": {
+      "amount": "383562.20",
+      "daily": "2739.73",
+      "minAmount": "124702.20",
+      "maxAmount": "955836.00",
+      "limitedBy": "earnings"
+    }
+  },
+  {
+    "id": "bir-max",
+    "kind": "calculateBir",
+    "input": {
+      "earnings2024": 5000000.0,
+      "earnings2025": 5000000.0,
+      "days": 140,
+      "excludedDays": 0,
+      "tenure6m": true,
+      "district": 1.0
+    },
+    "expected": {
+      "amount": "955836.00",
+      "daily": "6827.40",
+      "minAmount": "124702.20",
+      "maxAmount": "955836.00",
+      "limitedBy": "max"
+    }
+  },
+  {
+    "id": "bir-156",
+    "kind": "calculateBir",
+    "input": {
+      "earnings2024": 5000000.0,
+      "earnings2025": 5000000.0,
+      "days": 156,
+      "excludedDays": 0,
+      "tenure6m": true,
+      "district": 1.0
+    },
+    "expected": {
+      "amount": "1065074.40",
+      "daily": "6827.40",
+      "minAmount": "138953.88",
+      "maxAmount": "1065074.40",
+      "limitedBy": "max"
+    }
+  },
+  {
+    "id": "bir-194-min",
+    "kind": "calculateBir",
+    "input": {
+      "earnings2024": 0.0,
+      "earnings2025": 0.0,
+      "days": 194,
+      "excludedDays": 0,
+      "tenure6m": true,
+      "district": 1.0
+    },
+    "expected": {
+      "amount": "172801.62",
+      "daily": "890.73",
+      "minAmount": "172801.62",
+      "maxAmount": "1324515.60",
+      "limitedBy": "min"
+    }
+  },
+  {
+    "id": "bir-short-tenure",
+    "kind": "calculateBir",
+    "input": {
+      "earnings2024": 2000000.0,
+      "earnings2025": 2000000.0,
+      "days": 140,
+      "excludedDays": 0,
+      "tenure6m": false,
+      "district": 1.0
+    },
+    "expected": {
+      "amount": "124702.20",
+      "daily": "890.73",
+      "minAmount": "124702.20",
+      "maxAmount": "955836.00",
+      "limitedBy": "tenure"
+    }
+  },
+  {
+    "id": "bir-district-min",
+    "kind": "calculateBir",
+    "input": {
+      "earnings2024": 0.0,
+      "earnings2025": 0.0,
+      "days": 140,
+      "excludedDays": 0,
+      "tenure6m": true,
+      "district": 1.3
+    },
+    "expected": {
+      "amount": "162112.86",
+      "daily": "1157.95",
+      "minAmount": "162112.86",
+      "maxAmount": "955836.00",
+      "limitedBy": "min"
+    }
+  },
+  {
+    "id": "bir-excluded",
+    "kind": "calculateBir",
+    "input": {
+      "earnings2024": 1000000.0,
+      "earnings2025": 1000000.0,
+      "days": 140,
+      "excludedDays": 30,
+      "tenure6m": true,
+      "district": 1.0
+    },
+    "expected": {
+      "amount": "399999.60",
+      "daily": "2857.14",
+      "minAmount": "124702.20",
+      "maxAmount": "955836.00",
+      "limitedBy": "earnings"
+    }
+  },
+  {
+    "id": "bir-district-high",
+    "kind": "calculateBir",
+    "input": {
+      "earnings2024": 1000000.0,
+      "earnings2025": 1000000.0,
+      "days": 140,
+      "excludedDays": 0,
+      "tenure6m": true,
+      "district": 1.15
+    },
+    "expected": {
+      "amount": "383562.20",
+      "daily": "2739.73",
+      "minAmount": "143407.53",
+      "maxAmount": "955836.00",
+      "limitedBy": "earnings"
+    }
+  },
+  {
+    "id": "care-min",
+    "kind": "calculateCareWorking",
+    "input": {
+      "earnings2024": 0.0,
+      "earnings2025": 0.0,
+      "children": 1,
+      "excludedDays": 0,
+      "district": 1.0
+    },
+    "expected": {
+      "monthly": "10837.20",
+      "perChild": "10837.20",
+      "minMonthly": "10837.20",
+      "maxMonthly": "83021.18",
+      "cappedByEarnings": false
+    }
+  },
+  {
+    "id": "care-regular",
+    "kind": "calculateCareWorking",
+    "input": {
+      "earnings2024": 1000000.0,
+      "earnings2025": 1000000.0,
+      "children": 1,
+      "excludedDays": 0,
+      "district": 1.0
+    },
+    "expected": {
+      "monthly": "33315.12",
+      "perChild": "33315.12",
+      "minMonthly": "10837.20",
+      "maxMonthly": "83021.18",
+      "cappedByEarnings": false
+    }
+  },
+  {
+    "id": "care-max",
+    "kind": "calculateCareWorking",
+    "input": {
+      "earnings2024": 5000000.0,
+      "earnings2025": 5000000.0,
+      "children": 1,
+      "excludedDays": 0,
+      "district": 1.0
+    },
+    "expected": {
+      "monthly": "83021.18",
+      "perChild": "83021.18",
+      "minMonthly": "10837.20",
+      "maxMonthly": "83021.18",
+      "cappedByEarnings": false
+    }
+  },
+  {
+    "id": "care-two",
+    "kind": "calculateCareWorking",
+    "input": {
+      "earnings2024": 5000000.0,
+      "earnings2025": 5000000.0,
+      "children": 2,
+      "excludedDays": 0,
+      "district": 1.0
+    },
+    "expected": {
+      "monthly": "166042.36",
+      "perChild": "83021.18",
+      "minMonthly": "21674.40",
+      "maxMonthly": "166042.36",
+      "cappedByEarnings": false
+    }
+  },
+  {
+    "id": "care-two-floor",
+    "kind": "calculateCareWorking",
+    "input": {
+      "earnings2024": 0.0,
+      "earnings2025": 0.0,
+      "children": 2,
+      "excludedDays": 0,
+      "district": 1.0
+    },
+    "expected": {
+      "monthly": "21674.40",
+      "perChild": "10837.20",
+      "minMonthly": "21674.40",
+      "maxMonthly": "166042.36",
+      "cappedByEarnings": true
+    }
+  },
+  {
+    "id": "care-district",
+    "kind": "calculateCareWorking",
+    "input": {
+      "earnings2024": 1000000.0,
+      "earnings2025": 1000000.0,
+      "children": 1,
+      "excludedDays": 0,
+      "district": 1.3
+    },
+    "expected": {
+      "monthly": "33315.12",
+      "perChild": "33315.12",
+      "minMonthly": "14088.36",
+      "maxMonthly": "83021.18",
+      "cappedByEarnings": false
+    }
+  },
+  {
+    "id": "care-unemployed",
+    "kind": "calculateCareUnemployed",
+    "input": {
+      "children": 1,
+      "district": 1.0
+    },
+    "expected": {
+      "monthly": "10669.64",
+      "perChild": "10669.64"
+    }
+  },
+  {
+    "id": "care-unemployed-two",
+    "kind": "calculateCareUnemployed",
+    "input": {
+      "children": 2,
+      "district": 1.5
+    },
+    "expected": {
+      "monthly": "32008.92",
+      "perChild": "16004.46"
+    }
+  },
+  {
+    "id": "uni-low",
+    "kind": "calculateUnified",
+    "input": {
+      "income12m": 300000.0,
+      "familySize": 4,
+      "children": 1,
+      "pmChild": 18371.0,
+      "pmDush": 18939.0,
+      "propertyOk": true,
+      "zeroIncomeOk": true
+    },
+    "expected": {
+      "eligible": true,
+      "rate": "1",
+      "perChild": "18371.00",
+      "total": "18371.00",
+      "avgIncome": "6250.00"
+    }
+  },
+  {
+    "id": "uni-middle",
+    "kind": "calculateUnified",
+    "input": {
+      "income12m": 850000.0,
+      "familySize": 4,
+      "children": 1,
+      "pmChild": 18371.0,
+      "pmDush": 18939.0,
+      "propertyOk": true,
+      "zeroIncomeOk": true
+    },
+    "expected": {
+      "eligible": true,
+      "rate": "0.5",
+      "perChild": "9185.50",
+      "total": "9185.50",
+      "avgIncome": "17708.33"
+    }
+  },
+  {
+    "id": "uni-refused",
+    "kind": "calculateUnified",
+    "input": {
+      "income12m": 1200000.0,
+      "familySize": 4,
+      "children": 1,
+      "pmChild": 18371.0,
+      "pmDush": 18939.0,
+      "propertyOk": true,
+      "zeroIncomeOk": true
+    },
+    "expected": {
+      "eligible": false,
+      "rate": null,
+      "perChild": "0",
+      "total": "0",
+      "avgIncome": "25000.00"
+    }
+  },
+  {
+    "id": "uni-two-children",
+    "kind": "calculateUnified",
+    "input": {
+      "income12m": 300000.0,
+      "familySize": 4,
+      "children": 2,
+      "pmChild": 18371.0,
+      "pmDush": 18939.0,
+      "propertyOk": true,
+      "zeroIncomeOk": true
+    },
+    "expected": {
+      "eligible": true,
+      "rate": "1",
+      "perChild": "18371.00",
+      "total": "36742.00",
+      "avgIncome": "6250.00"
+    }
+  },
+  {
+    "id": "uni-property",
+    "kind": "calculateUnified",
+    "input": {
+      "income12m": 300000.0,
+      "familySize": 4,
+      "children": 1,
+      "pmChild": 18371.0,
+      "pmDush": 18939.0,
+      "propertyOk": false,
+      "zeroIncomeOk": true
+    },
+    "expected": {
+      "eligible": false,
+      "rate": null,
+      "perChild": "0",
+      "total": "0",
+      "avgIncome": "6250.00"
+    }
+  },
+  {
+    "id": "uni-zero-income",
+    "kind": "calculateUnified",
+    "input": {
+      "income12m": 300000.0,
+      "familySize": 4,
+      "children": 1,
+      "pmChild": 18371.0,
+      "pmDush": 18939.0,
+      "propertyOk": true,
+      "zeroIncomeOk": false
+    },
+    "expected": {
+      "eligible": false,
+      "rate": null,
+      "perChild": "0",
+      "total": "0",
+      "avgIncome": "6250.00"
+    }
+  },
+  {
+    "id": "uni-regional",
+    "kind": "calculateUnified",
+    "input": {
+      "income12m": 300000.0,
+      "familySize": 4,
+      "children": 1,
+      "pmChild": 20000.0,
+      "pmDush": 20000.0,
+      "propertyOk": true,
+      "zeroIncomeOk": true
+    },
+    "expected": {
+      "eligible": true,
+      "rate": "1",
+      "perChild": "20000.00",
+      "total": "20000.00",
+      "avgIncome": "6250.00"
+    }
+  },
+  {
+    "id": "uni-boundary",
+    "kind": "calculateUnified",
+    "input": {
+      "income12m": 909072.0,
+      "familySize": 4,
+      "children": 1,
+      "pmChild": 18371.0,
+      "pmDush": 18939.0,
+      "propertyOk": true,
+      "zeroIncomeOk": true
+    },
+    "expected": {
+      "eligible": false,
+      "rate": null,
+      "perChild": "0",
+      "total": "0",
+      "avgIncome": "18939.00"
+    }
+  }
+]
