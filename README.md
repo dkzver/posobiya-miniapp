@@ -92,12 +92,16 @@ python tools/gen_fixtures.py
 
 ## Деплой
 
-Сайт лежит в `site/` и не требует сборки. Workflow `.github/workflows/pages.yml`
-запускает тесты и публикует `site/` на GitHub Pages при каждом пуше в `main`.
+Сайт лежит в `site/` и не требует сборки. Публикация идёт напрямую из ветки `main`,
+без GitHub Actions:
 
-В настройках репозитория: **Settings → Pages → Source: GitHub Actions**.
+**Settings → Pages → Source: Deploy from a branch → `main` / `/site`.**
 
-Адрес будет `https://<username>.github.io/<repo>/`.
+Адрес: `https://<username>.github.io/<repo>/`. Каждый пуш в `main` обновляет сайт
+в течение минуты.
+
+Такой способ не расходует минуты Actions и работает даже там, где Actions ограничены.
+Если позже понадобится CI, можно добавить workflow с тестами и `deploy-pages`.
 
 ### Свой домен
 
@@ -121,7 +125,6 @@ tests/
   fixtures.json  эталоны из Python
 tools/
   gen_fixtures.py
-.github/workflows/pages.yml
 ```
 
 ## Обновление сумм
